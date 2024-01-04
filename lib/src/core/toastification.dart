@@ -218,7 +218,7 @@ class Toastification {
     ToastificationAnimationBuilder? animationBuilder,
     ToastificationType? type,
     ToastificationStyle? style,
-    required String title,
+     String? title,
     Duration? animationDuration,
     String? description,
     Widget? icon,
