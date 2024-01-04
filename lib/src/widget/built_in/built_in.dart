@@ -55,7 +55,7 @@ class BuiltInContent extends StatelessWidget {
   const BuiltInContent({
     super.key,
     required this.style,
-    required this.title,
+     this.title,
     this.description,
     this.primaryColor,
     this.foregroundColor,
@@ -68,7 +68,7 @@ class BuiltInContent extends StatelessWidget {
 
   final BuiltInStyle style;
 
-  final String title;
+  final String? title;
 
   final String? description;
 
@@ -84,12 +84,7 @@ class BuiltInContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget content = Text(
-      title,
-      style: style.titleTextStyle(context)?.copyWith(
-            color: foregroundColor,
-          ),
-    );
+    Widget content = const SizedBox();
 
     final showColumn =
         description?.isNotEmpty == true || showProgressBar == true;
@@ -115,7 +110,7 @@ class BuiltInContent extends StatelessWidget {
               data: progressIndicatorTheme ??
                   style.progressIndicatorTheme(context),
               child: progressBarWidget ??
-                  LinearProgressIndicator(value: progressBarValue),
+                  LinearProgressIndicator(value: progressBarValue,),
             ),
           ],
         ],
