@@ -101,6 +101,7 @@ class BuiltInContent extends StatelessWidget {
               description!,
               style: style.descriptionTextStyle(context)?.copyWith(
                     color: foregroundColor?.withOpacity(.7),
+                fontWeight: FontWeight.bold,
                   ),
             ),
           ],
